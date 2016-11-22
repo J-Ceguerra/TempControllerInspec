@@ -19,7 +19,7 @@ public class Test2 {
 
     private static void TestUpdate() {
         if (EditorApplication.isCompiling && isSubscribed) {
-            Debug.Log("It was compiling");
+            printDebug("It was compiling");
             RemoveSubscription();
         }
         Debug.Log("Test2 Update");
