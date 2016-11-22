@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-[ExecuteInEditMode]
 public class Test1 : MonoBehaviour {
 
 	// Use this for initialization
@@ -11,6 +10,13 @@ public class Test1 : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        print("Test1 Update");
+
 	}
+
+    void OnGUI() {
+        Vector2 pos = Camera.main.WorldToScreenPoint(transform.position);
+        pos.y = Screen.height - pos.y;
+        Vector2 siz = new Vector2(100, 20);
+        GUI.Label(new Rect(pos, siz), "Hello World!");
+    }
 }
