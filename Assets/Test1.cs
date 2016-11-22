@@ -18,5 +18,7 @@ public class Test1 : MonoBehaviour {
         pos.y = Screen.height - pos.y;
         Vector2 siz = new Vector2(100, 20);
         GUI.Label(new Rect(pos, siz), "Hello World!");
+        pos.y += 50;
+        GUI.TextField(new Rect(pos, siz), "ASLKDJASKLJ");
     }
 }
