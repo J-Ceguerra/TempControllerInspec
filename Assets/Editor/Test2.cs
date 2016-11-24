@@ -10,11 +10,15 @@ public class Test2 {
 
     private static bool isSubscribed = false;
     private static bool debug = false;
+    private static bool Run = true;
 
     static Test2() {
         printDebug("Test2 Constructor");
         RemoveSubscription();
-        AddSubscription();
+        Run = false;
+        if (Run) {
+            AddSubscription();
+        }
     }
     private static void AddSubscription() {
         printDebug("Test2 SubAdded");
